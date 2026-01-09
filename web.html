@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deena Real Estate</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+/* Header */
+header{
+    background:#0a2647;
+    padding:20px;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:28px;
+}
+
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#ffcc00;
+}
+
+/* Hero */
+.hero{
+    background:url("https://images.unsplash.com/photo-1568605114967-8130f3a36994") center/cover no-repeat;
+    height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero div{
+    background:rgba(0,0,0,0.6);
+    padding:40px;
+    border-radius:10px;
+}
+
+.hero h2{
+    font-size:40px;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.hero button{
+    padding:12px 30px;
+    background:#ffcc00;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.hero button:hover{
+    background:#e6b800;
+}
+
+/* Search */
+.search{
+    background:white;
+    padding:30px;
+    margin:-50px auto 40px;
+    width:80%;
+    display:flex;
+    gap:15px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.search input, .search select{
+    flex:1;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.search button{
+    padding:12px 25px;
+    background:#0a2647;
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+
+/* Properties */
+.section{
+    padding:50px 10%;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#0a2647;
+}
+
+.properties{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card .content{
+    padding:20px;
+}
+
+.price{
+    color:#ff6600;
+    font-weight:600;
+}
+
+/* Features */
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    text-align:center;
+}
+
+.feature{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Contact */
+.contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact form input, .contact form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+.contact button{
+    padding:12px;
+    background:#0a2647;
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+
+/* Footer */
+footer{
+    background:#0a2647;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+    .contact{
+        grid-template-columns:1fr;
+    }
+    header{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Deena Real Estate</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Properties</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Find Your Dream Home</h2>
+        <p>Luxury • Affordable • Trusted Properties</p>
+        <button>Explore Now</button>
+    </div>
+</section>
+
+<div class="search">
+    <input type="text" placeholder="Location">
+    <select>
+        <option>Property Type</option>
+        <option>Apartment</option>
+        <option>Villa</option>
+        <option>Land</option>
+    </select>
+    <input type="number" placeholder="Max Price">
+    <button>Search</button>
+</div>
+
+<section class="section">
+    <h2>Featured Properties</h2>
+    <div class="properties">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825">
+            <div class="content">
+                <h3>Luxury Villa</h3>
+                <p class="price">₹1.2 Crore</p>
+                <p>Chennai</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+            <div class="content">
+                <h3>Modern Apartment</h3>
+                <p class="price">₹65 Lakhs</p>
+                <p>Bangalore</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+            <div class="content">
+                <h3>Independent House</h3>
+                <p class="price">₹85 Lakhs</p>
+                <p>Coimbatore</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Why Choose Us</h2>
+    <div class="features">
+        <div class="feature">🏠 Verified Properties</div>
+        <div class="feature">📊 Smart Price Analysis</div>
+        <div class="feature">🔒 Secure Transactions</div>
+        <div class="feature">🤝 Trusted Agents</div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Contact Us</h2>
+    <div class="contact">
+        <div>
+            <h3>Deena Real Estate</h3>
+            <p>Email: deenarealestate@gmail.com</p>
+            <p>Phone: +91 9843718797</p>
+            <p>Location: Tamil Nadu</p>
+        </div>
+
+        <form onsubmit="sendMessage(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Deena Real Estate | All Rights Reserved</p>
+</footer>
+
+<script>
+function sendMessage(e){
+    e.preventDefault();
+    alert("Thank you! Our agent will contact you soon.");
+}
+</script>
+
+</body>
+</html>
+
